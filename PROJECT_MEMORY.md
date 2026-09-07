@@ -139,7 +139,7 @@
 | **Homepage Layout** | Full-viewport (100vh) snap-like sections with dark overlay backgrounds |
 | **Owner image** | Single image in editorial layout with CSS `grayscale contrast-110` |
 | **Practice Cards** | Expandable interactive accordion cards with professional imagery |
-| **Chambers Gallery** | Responsive masonry grid + full-screen keyboard-navigable lightbox |
+| **Our office Gallery** | Responsive masonry grid + full-screen keyboard-navigable lightbox |
 | **Footer** | Ultra-minimal single line footer |
 
 ---

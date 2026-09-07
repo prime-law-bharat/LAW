@@ -9,7 +9,7 @@ export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState<'all' | 'cabin' | 'conference' | 'workstation' | 'outside'>('all');
 
   const categories = [
-    { id: 'all', label: 'All Chambers' },
+    { id: 'all', label: 'Our office' },
     { id: 'cabin', label: 'Executive Cabins' },
     { id: 'conference', label: 'Conference Suites' },
     { id: 'workstation', label: 'Workspaces & Corridors' },
@@ -34,7 +34,7 @@ export default function GalleryPage() {
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-[#C9A45C] font-semibold mb-4 font-body text-center ml-[0.35em]">
-            Chambers & Facilities
+               Our office
           </p>
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 tracking-tight">
             Our Workspace
