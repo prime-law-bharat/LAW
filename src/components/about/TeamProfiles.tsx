@@ -28,26 +28,12 @@ export default function TeamProfiles() {
                   )}
                 </div>
                 
-                <div className="border-t border-white/10 pt-6 mb-8">
+                <div className="border-t border-white/10 pt-6">
                   <p className="font-body text-white/75 text-sm sm:text-base leading-relaxed whitespace-pre-line text-justify">
                     {member.bio}
                   </p>
                 </div>
               </div>
-              
-              {member.expertise && member.expertise.length > 0 && (
-                <div className="border-t border-white/10 pt-6">
-                  <h4 className="font-heading text-sm text-white/90 uppercase tracking-widest mb-4">Areas of Expertise</h4>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {member.expertise.map((item, idx) => (
-                      <li key={idx} className="flex items-start text-xs sm:text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#C9A45C] mt-1.5 mr-2.5 flex-shrink-0" />
-                        <span className="font-body text-white/70">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </div>
           ))}
         </div>
