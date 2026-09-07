@@ -195,7 +195,10 @@ export default function HomePage() {
         ))}
       </div>
 
-      <section id="hero" className="snap-section relative flex items-center justify-start overflow-hidden">
+      <section
+        id="hero"
+        className="snap-section relative flex items-center justify-start overflow-hidden"
+      >
         <div className="absolute inset-0">
           <Image
             src="/images/hero/hero-law-office.jpg"
@@ -204,14 +207,15 @@ export default function HomePage() {
             priority
             quality={90}
             sizes="100vw"
-                        className="hero-bg-img object-cover scale-105"
+            className="hero-bg-img object-cover scale-105"
           />
         </div>
         <div className="section-overlay bg-[#0F1B2D]/75" />
 
         {/* Right-Side Transparent Law Emblem (logo-1-removebg.png) */}
+        {/* Desktop Law Emblem */}
         <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10 hidden md:block">
-        <div className="relative transition-all duration-700 hover:scale-105">
+          <div className="relative transition-all duration-700 hover:scale-105">
             <Image
               src="/images/logo/logo-1-removebg.png"
               alt="Prime Law Bharat Legal Emblem"
@@ -224,18 +228,48 @@ export default function HomePage() {
         </div>
         <div className="section-content">
           <div className="flex flex-col items-start pt-6 sm:pt-0">
-            <p className="hero-label section-label">Advocates & Legal Consultants</p>
+            <p className="hero-label section-label">
+              Advocates & Legal Consultants
+            </p>
             <h1 className="hero-title section-title overflow-hidden">
-              <span className="text-[#FF9933]">Your</span> <span className="text-white">Case,</span> <span className="text-white">Our</span> <span className="text-[#128807]">Commitment</span>
+              <span className="text-[#FF9933]">Your</span>{" "}
+              <span className="text-white">Case,</span>{" "}
+              <span className="text-white">Our</span>{" "}
+              <span className="text-[#128807]">Commitment</span>
             </h1>
             <p className="hero-sub section-desc !text-center">{FIRM.tagline}</p>
+
+            {/* Mobile Law Emblem */}
+            {/* Mobile Law Emblem */}
+            <div className="flex md:hidden justify-center w-full mt-0 mb-4">
+              <div className="relative transition-all duration-700">
+                <Image
+                  src="/images/logo/logo-1-removebg.png"
+                  alt="Prime Law Bharat Legal Emblem"
+                  width={220}
+                  height={220}
+                  className="w-[165px] h-[165px] sm:w-[185px] sm:h-[185px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
+                  priority
+                />
+              </div>
+            </div>
+
             <div className="hero-sub w-20 h-[2px] bg-[#C9A45C] mb-10" />
+
             <div className="hero-cta flex flex-wrap gap-4 items-center">
-              <Link href="/contact" className="btn-khaitan-accent group" data-cursor="view">
+              <Link
+                href="/contact"
+                className="btn-khaitan-accent group"
+                data-cursor="view"
+              >
                 <span>Schedule a Consultation</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
-              <Link href="/practice-areas" className="btn-khaitan group" data-cursor="view">
+              <Link
+                href="/practice-areas"
+                className="btn-khaitan group"
+                data-cursor="view"
+              >
                 <span>Explore Practice Areas</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
@@ -247,7 +281,9 @@ export default function HomePage() {
           onClick={() => scrollToSection(1)}
           className="scroll-indicator cursor-pointer bg-transparent border-0"
         >
-          <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-body">Scroll Down</span>
+          <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-body">
+            Scroll Down
+          </span>
           <ChevronDown className="w-5 h-5 text-white/70" />
         </button>
       </section>
