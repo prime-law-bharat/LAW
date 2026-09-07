@@ -466,11 +466,11 @@ export const TEAM_MEMBERS = [
     name: "Adv. Reetika Kamthan",
     designation: "Advocate",
     image: "/images/Team/Reetika.jpg",
-    expertise: "Civil & Property Litigation, Criminal Litigation & Trial Advocacy, High Court & Supreme Court Matters, RERA & Real Estate Litigation, Corporate & Commercial Litigation, Consumer Protection, Family Matters, Cheque Bounce & Recovery Matters, Injunction & Interim Relief Proceedings, Franchisee & Business Disputes.",
+    expertise: "Civil & Property Litigation • Criminal Litigation & Trial Advocacy • High Court & Supreme Court Matters • RERA & Real Estate Litigation • Corporate & Commercial Litigation • Consumer Protection • Family Matters • Cheque Bounce & Recovery Matters • Injunction & Interim Relief Proceedings • Franchisee & Business Disputes",
     shortExpertise: "Civil & Property Litigation, Criminal Litigation, High Court & Supreme Court Matters, RERA, Corporate Litigation, Family Matters.",
     biography: `With over 8 years of hands-on litigation experience before the Pune District Court and the Bombay High Court, Adv. Reetika Kamthan has built a practice that spans an unusually wide range of matters, and an unusually wide geography, with exposure to cases across Pune, Mumbai, Nagpur, Delhi, and Bangalore.
 
-Her work covers Civil, Criminal, Consumer, and Matrimonial Disputes; DRT/DRAT; RERA; Arbitration; and Financial, Corporate, and Commercial Litigation, including appearances before High Courts, the Supreme Court, and a range of specialised tribunals. She brings substantial, practical experience to property disputes, injunctions, recovery matters, cheque-bounce cases, franchisee disputes, and business litigation, the kind of experience that comes only from handling these matters again and again.
+Her work covers Civil, Criminal, Consumer, and Matrimonial Disputes, DRT/DRAT, RERA, Arbitration, and Financial, Corporate, and Commercial Litigation, including appearances before High Courts, the Supreme Court, and a range of specialised tribunals. She brings substantial, practical experience to property disputes, injunctions, recovery matters, cheque-bounce cases, franchisee disputes, and business litigation, the kind of experience that comes only from handling these matters again and again.
 
 Adv. Reetika’s approach is strategic and result-oriented, grounded in strong courtroom advocacy paired with practical, real-world legal solutions. She has represented reputed builders, corporate entities, and business organisations in some of their most complex and commercially sensitive disputes.`
   },
@@ -479,7 +479,7 @@ Adv. Reetika’s approach is strategic and result-oriented, grounded in strong c
     name: "Adv. Abhishek Motewar",
     designation: "Advocate",
     image: "/images/Team/Abhishek.jpg",
-    expertise: "Financial & Economic Offences, SEBI & Regulatory Matters, ED & PMLA Proceedings, CBI & Criminal Litigation, MPID & Investor Disputes, DRT, DRAT & Financial Disputes, High Court & Supreme Court Litigation",
+    expertise: "Financial & Economic Offences • SEBI & Regulatory Matters • ED & PMLA Proceedings • CBI & Criminal Litigation • MPID & Investor Disputes • DRT, DRAT & Financial Disputes • High Court & Supreme Court Litigation",
     shortExpertise: "Financial & Economic Offences, SEBI & Regulatory Matters, ED & PMLA Proceedings, CBI & Criminal Litigation, MPID.",
     biography: `Adv. Abhishek Motewar has built his practice around some of the highest-stakes work in Indian litigation: financial fraud, regulatory enforcement, and criminal proceedings, handled before SEBI, the Enforcement Directorate, the CBI, MPID courts, the DRT, and the higher judiciary.
 

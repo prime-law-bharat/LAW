@@ -27,6 +27,11 @@ export default function TeamProfilePage({ params }: TeamProfileProps) {
   // split paragraphs from biography
   const paragraphs = member.biography.split('\n\n').filter(Boolean);
 
+  // Split expertise into individual bullet points
+  const expertiseItems = member.expertise.includes(' • ')
+    ? member.expertise.split(' • ').map((item) => item.trim()).filter(Boolean)
+    : member.expertise.split(',').map((item) => item.trim().replace(/\.$/, '')).filter(Boolean);
+
   return (
     <div className="bg-[#0F1B2D] min-h-screen text-white pt-20 sm:pt-24 pb-14 sm:pb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
@@ -59,8 +64,8 @@ export default function TeamProfilePage({ params }: TeamProfileProps) {
             {/* Expertise Sidebar (Desktop) */}
             <div className="mt-10 p-8 border border-white/10 bg-white/[0.02] hidden lg:block rounded-sm">
               <h4 className="text-xs uppercase tracking-[0.2em] text-[#C9A45C] font-semibold mb-6">Areas of Expertise</h4>
-              <ul className="space-y-4">
-                {member.expertise.split(' • ').map((item, idx) => (
+              <ul className="space-y-3.5">
+                {expertiseItems.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#C9A45C] mt-2 flex-shrink-0" />
                     <span className="text-sm text-white/80 font-body leading-relaxed">{item}</span>
@@ -94,8 +99,8 @@ export default function TeamProfilePage({ params }: TeamProfileProps) {
             {/* Expertise (Mobile/Tablet) */}
             <div className="mt-12 p-5 sm:p-8 border border-white/10 bg-white/[0.02] lg:hidden rounded-sm">
               <h4 className="text-xs uppercase tracking-[0.2em] text-[#C9A45C] font-semibold mb-6">Areas of Expertise</h4>
-              <ul className="space-y-4">
-                {member.expertise.split(' • ').map((item, idx) => (
+              <ul className="space-y-3.5">
+                {expertiseItems.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#C9A45C] mt-2 flex-shrink-0" />
                     <span className="text-sm text-white/80 font-body leading-relaxed">{item}</span>
