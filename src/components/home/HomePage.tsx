@@ -240,15 +240,14 @@ export default function HomePage() {
             <p className="hero-sub section-desc !text-center">{FIRM.tagline}</p>
 
             {/* Mobile Law Emblem */}
-            {/* Mobile Law Emblem */}
             <div className="flex md:hidden justify-center w-full mt-0 mb-4">
               <div className="relative transition-all duration-700">
                 <Image
                   src="/images/logo/logo-1-removebg.png"
                   alt="Prime Law Bharat Legal Emblem"
                   width={220}
-                  height={220}
-                  className="w-[165px] h-[165px] sm:w-[185px] sm:h-[185px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
+                  height={250}
+                  className="w-[200px] h-[220px] sm:w-[250px] sm:h-[270px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
                   priority
                 />
               </div>
