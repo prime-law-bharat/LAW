@@ -1,6 +1,6 @@
 import { FIRM, ABOUT, COMMITMENTS, KEY_STRENGTHS } from '@/lib/constants';
 import SectionHeading from '@/components/ui/SectionHeading';
-import TeamProfiles from '@/components/about/TeamProfiles';
+
 import Image from 'next/image';
 
 export default function AboutPage() {
@@ -107,9 +107,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <TeamProfiles />
-
+     
       {/* Closing Commitment Quote */}
       <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 text-center max-w-4xl mx-auto">
         <p className="font-body text-lg sm:text-xl text-white/80 mb-12 leading-relaxed text-justify">
