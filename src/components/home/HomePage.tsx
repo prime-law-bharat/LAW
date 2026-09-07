@@ -197,8 +197,16 @@ export default function HomePage() {
 
       <section
         id="hero"
-        className="snap-section relative flex items-center justify-start overflow-hidden"
+        className="
+    snap-section
+    relative
+    flex
+    items-center
+    justify-start
+    overflow-hidden
+  "
       >
+        {/* Background */}
         <div className="absolute inset-0">
           <Image
             src="/images/hero/hero-law-office.jpg"
@@ -210,63 +218,198 @@ export default function HomePage() {
             className="hero-bg-img object-cover scale-105"
           />
         </div>
+
+        {/* Overlay */}
         <div className="section-overlay bg-[#0F1B2D]/75" />
 
-        {/* Right-Side Transparent Law Emblem (logo-1-removebg.png) */}
-        {/* Desktop Law Emblem */}
-        <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10 hidden md:block">
+        <div
+          className="
+      absolute
+      right-8
+      md:right-16
+      lg:right-24
+      top-1/2
+      -translate-y-1/2
+      pointer-events-none
+      select-none
+      z-10
+      hidden
+      md:block
+    "
+        >
           <div className="relative transition-all duration-700 hover:scale-105">
             <Image
               src="/images/logo/logo-1-removebg.png"
               alt="Prime Law Bharat Legal Emblem"
               width={330}
               height={330}
-              className="w-[235px] h-[235px] lg:w-[285px] lg:h-[285px] xl:w-[325px] xl:h-[325px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
+              className="
+          w-[235px]
+          h-[235px]
+          lg:w-[285px]
+          lg:h-[285px]
+          xl:w-[325px]
+          xl:h-[325px]
+          object-contain
+          drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]
+        "
               priority
             />
           </div>
         </div>
-        <div className="section-content">
-          <div className="flex flex-col items-start pt-6 sm:pt-0">
-            <p className="hero-label section-label">
+
+        <div
+          className="
+      section-content
+      w-full
+      relative
+      z-20
+    "
+        >
+          <div
+            className="
+        flex
+        flex-col
+        items-center
+        md:items-start
+
+        pt-6
+        sm:pt-8
+        md:pt-0
+
+        px-5
+        sm:px-8
+        md:px-0
+      "
+          >
+            {/* Label */}
+            <p
+              className="
+          hero-label
+          section-label
+          text-center
+          md:text-left
+          w-full
+          md:w-auto
+        "
+            >
               Advocates & Legal Consultants
             </p>
-            <h1 className="hero-title section-title overflow-hidden">
+
+            {/* Main Heading */}
+            <h1
+              className="
+          hero-title
+          section-title
+          overflow-hidden
+          text-center
+          md:text-left
+          w-full
+          md:w-auto
+        "
+            >
               <span className="text-[#FF9933]">Your</span>{" "}
               <span className="text-white">Case,</span>{" "}
               <span className="text-white">Our</span>{" "}
               <span className="text-[#128807]">Commitment</span>
             </h1>
-            <p className="hero-sub section-desc !text-center">{FIRM.tagline}</p>
 
-            {/* Mobile Law Emblem */}
-            <div className="flex md:hidden justify-center w-full mt-0 mb-4">
+            {/* Tagline */}
+            <p
+              className="
+          hero-sub
+          section-desc
+          !text-center
+          w-full
+          max-w-[500px]
+          md:max-w-none
+          mx-auto
+          md:mx-0
+        "
+            >
+              {FIRM.tagline}
+            </p>
+
+            <div
+              className="
+          flex
+          md:hidden
+          justify-center
+          items-center
+          w-full
+          mt-1
+          mb-3
+        "
+            >
               <div className="relative transition-all duration-700">
                 <Image
                   src="/images/logo/logo-1-removebg.png"
                   alt="Prime Law Bharat Legal Emblem"
-                  width={220}
-                  height={250}
-                  className="w-[200px] h-[220px] sm:w-[250px] sm:h-[270px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
+                  width={240}
+                  height={240}
+                  className="
+              w-[185px]
+              h-[185px]
+              sm:w-[210px]
+              sm:h-[210px]
+              object-contain
+              drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]
+            "
                   priority
                 />
               </div>
             </div>
 
-            <div className="hero-sub w-20 h-[2px] bg-[#C9A45C] mb-10" />
+            {/* Gold Divider */}
+            <div
+              className="
+          hero-sub
+          w-20
+          h-[2px]
+          bg-[#C9A45C]
+          mb-6
+          md:mb-10
+        "
+            />
 
-            <div className="hero-cta flex flex-wrap gap-4 items-center">
+            <div
+              className="
+          hero-cta
+          flex
+          flex-col
+          sm:flex-row
+          gap-3
+          sm:gap-4
+          items-stretch
+          sm:items-center
+          w-full
+          sm:w-auto
+        "
+            >
               <Link
                 href="/contact"
-                className="btn-khaitan-accent group"
+                className="
+            btn-khaitan-accent
+            group
+            w-full
+            sm:w-auto
+            justify-center
+          "
                 data-cursor="view"
               >
                 <span>Schedule a Consultation</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
+
               <Link
                 href="/practice-areas"
-                className="btn-khaitan group"
+                className="
+            btn-khaitan
+            group
+            w-full
+            sm:w-auto
+            justify-center
+          "
                 data-cursor="view"
               >
                 <span>Explore Practice Areas</span>
@@ -275,14 +418,32 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
         <button
           type="button"
           onClick={() => scrollToSection(1)}
-          className="scroll-indicator cursor-pointer bg-transparent border-0"
+          className="
+              scroll-indicator
+              cursor-pointer
+              bg-transparent
+              border-0
+              z-30
+              !bottom-1
+              sm:!bottom-2
+            "
         >
-          <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-body">
+          <span
+            className="
+                text-[10px]
+                uppercase
+                tracking-[0.3em]
+                text-white/50
+                font-body
+              "
+          >
             Scroll Down
           </span>
+
           <ChevronDown className="w-5 h-5 text-white/70" />
         </button>
       </section>
