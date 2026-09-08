@@ -115,7 +115,7 @@ export async function POST(request: Request) {
     `;
 
     // Process the attachments
-    const attachments: nodemailer.SendMailOptions['attachments'] = [];
+    const attachments: any[] = [];
     
     if (attachment && attachment.size > 0) {
       const buffer = Buffer.from(await attachment.arrayBuffer());
