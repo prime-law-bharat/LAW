@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { FIRM } from '@/lib/constants';
+import CareerForm from '@/components/career/CareerForm';
 
 export const metadata = {
   title: 'Careers | Prime Law Bharat',
@@ -144,73 +145,7 @@ export default function CareerPage() {
             </p>
           </div>
 
-          <div className="bg-[#0F1B2D] p-5 sm:p-8 md:p-12 border border-white/10 rounded-sm">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Full Name *</label>
-                  <input type="text" className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Email Address *</label>
-                  <input type="email" className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Phone Number *</label>
-                  <input type="tel" className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Current Role / Qualification *</label>
-                  <input type="text" className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Area of Interest *</label>
-                  <select className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white/80 focus:outline-none focus:border-[#C9A45C] transition-colors appearance-none" required defaultValue="">
-                    <option value="" disabled>Select an option</option>
-                    <option value="internship">Internship</option>
-                    <option value="junior">Junior Advocate</option>
-                    <option value="associate">Associate Lawyer</option>
-                    <option value="research">Legal Research</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Experience *</label>
-                  <input type="text" placeholder="e.g. 2 years, Student, etc." className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Message / Cover Note *</label>
-                <textarea rows={5} className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors resize-none" required></textarea>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Upload CV / Resume</label>
-                <label className="block w-full border border-dashed border-white/20 bg-[#0A1220] px-4 py-8 text-center hover:border-[#C9A45C] hover:bg-white/[0.02] transition-colors cursor-pointer rounded-sm">
-                  <span className="text-white/60 text-sm font-body">Click to upload file (PDF, DOCX)</span>
-                  <input type="file" className="hidden" accept=".pdf,.doc,.docx" />
-                </label>
-              </div>
-
-              <div className="pt-6 flex flex-col sm:flex-row gap-5 items-center">
-                <button type="submit" className="w-full sm:w-auto btn-khaitan-accent group justify-center">
-                  <span>Submit Application</span>
-                  <ArrowRight className="btn-arrow w-4 h-4" />
-                </button>
-                <Link href="/contact" className="w-full sm:w-auto btn-khaitan group justify-center text-center">
-                  <span>Contact the Firm</span>
-                  <ArrowRight className="btn-arrow w-4 h-4" />
-                </Link>
-              </div>
-            </form>
-          </div>
+          <CareerForm />
         </div>
       </section>
 
