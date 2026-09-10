@@ -222,6 +222,7 @@ export default function HomePage() {
         {/* Overlay */}
         <div className="section-overlay bg-[#0F1B2D]/75" />
 
+        {/* Logo - Desktop */}
         <div
           className="
       absolute
@@ -272,28 +273,36 @@ export default function HomePage() {
         flex-col
         items-center
         md:items-start
-
         pt-6
         sm:pt-8
         md:pt-0
-
-        px-5
-        sm:px-8
+        px-4
+        sm:px-6
         md:px-0
       "
           >
             {/* Label */}
             <p
               className="
-          hero-label
-          section-label
-          text-center
-          md:text-left
-          w-full
-          md:w-auto
-        "
+    hero-label
+    section-label
+    text-center
+    md:text-left
+    w-full
+    md:w-auto
+    
+    text-xs
+    sm:text-sm
+    md:text-base
+    
+    leading-snug
+    
+    px-3
+    sm:px-0
+  "
             >
-              Advocates & Legal Consultants
+              <span className="block md:inline">Advocates &</span>
+              <span className="block md:inline">Legal Consultants</span>
             </p>
 
             {/* Main Heading */}
@@ -306,6 +315,11 @@ export default function HomePage() {
           md:text-left
           w-full
           md:w-auto
+          
+          text-3xl
+          sm:text-4xl
+          md:text-5xl
+          lg:text-6xl
         "
             >
               <span className="text-[#FF9933]">Your</span>{" "}
@@ -320,16 +334,23 @@ export default function HomePage() {
           hero-sub
           section-desc
           !text-center
+          md:!text-left
           w-full
-          max-w-[500px]
+          max-w-[90%]
+          sm:max-w-[500px]
           md:max-w-none
           mx-auto
           md:mx-0
+          
+          text-xs
+          sm:text-sm
+          md:text-base
         "
             >
               {FIRM.tagline}
             </p>
 
+            {/* Logo - Mobile */}
             <div
               className="
           flex
@@ -337,8 +358,8 @@ export default function HomePage() {
           justify-center
           items-center
           w-full
-          mt-1
-          mb-3
+          mt-4
+          mb-4
         "
             >
               <div className="relative transition-all duration-700">
@@ -348,10 +369,10 @@ export default function HomePage() {
                   width={240}
                   height={240}
                   className="
-              w-[185px]
-              h-[185px]
-              sm:w-[210px]
-              sm:h-[210px]
+              w-[160px]
+              h-[160px]
+              sm:w-[200px]
+              sm:h-[200px]
               object-contain
               drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]
             "
@@ -364,7 +385,8 @@ export default function HomePage() {
             <div
               className="
           hero-sub
-          w-20
+          w-16
+          sm:w-20
           h-[2px]
           bg-[#C9A45C]
           mb-6
@@ -372,6 +394,7 @@ export default function HomePage() {
         "
             />
 
+            {/* CTA Buttons */}
             <div
               className="
           hero-cta
@@ -394,6 +417,10 @@ export default function HomePage() {
             w-full
             sm:w-auto
             justify-center
+            
+            text-xs
+            sm:text-sm
+            md:text-base
           "
                 data-cursor="view"
               >
@@ -409,6 +436,10 @@ export default function HomePage() {
             w-full
             sm:w-auto
             justify-center
+            
+            text-xs
+            sm:text-sm
+            md:text-base
           "
                 data-cursor="view"
               >
@@ -419,27 +450,29 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Scroll Indicator */}
         <button
           type="button"
           onClick={() => scrollToSection(1)}
           className="
-              scroll-indicator
-              cursor-pointer
-              bg-transparent
-              border-0
-              z-30
-              !bottom-1
-              sm:!bottom-2
-            "
+      scroll-indicator
+      cursor-pointer
+      bg-transparent
+      border-0
+      z-30
+      !bottom-2
+      sm:!bottom-4
+    "
         >
           <span
             className="
-                text-[10px]
-                uppercase
-                tracking-[0.3em]
-                text-white/50
-                font-body
-              "
+        text-[10px]
+        sm:text-xs
+        uppercase
+        tracking-[0.3em]
+        text-white/50
+        font-body
+      "
           >
             Scroll Down
           </span>
@@ -447,7 +480,6 @@ export default function HomePage() {
           <ChevronDown className="w-5 h-5 text-white/70" />
         </button>
       </section>
-
       <section
         id="why-choose-us"
         className="snap-section relative flex items-center"
@@ -674,30 +706,56 @@ export default function HomePage() {
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-1/2 h-[80%] bg-[#C9A45C]/5 blur-[120px] pointer-events-none rounded-full" />
       </section>
 
+
       <section
         id="contact"
-        className="snap-section"
-        style={{ backgroundImage: "url('/images/workstation/workstation.jpg')" }}
+        className="snap-section scroll-mt-20 sm:scroll-mt-24"
+        style={{
+          backgroundImage: "url('/images/workstation/workstation.jpg')",
+        }}
       >
         <div className="section-overlay bg-[#0F1B2D]/85" />
-        <div className="section-content flex flex-col justify-between min-h-[100dvh] py-16 sm:py-28">
+        <div className="section-content flex flex-col justify-between min-h-[100dvh] pt-24 sm:pt-32 md:pt-28 pb-16 sm:pb-28">
           <div>
-            <p className="section-label reveal-up">Get In Touch</p>
-            <h2 className="section-title max-w-4xl reveal-up">Schedule a Consultation</h2>
-            <p className="section-desc reveal-up">{ABOUT.whereWePractice}<br /><br />{ABOUT.Address}</p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-stretch sm:items-center reveal-up">
-              <Link href="/contact" className="btn-khaitan-accent group justify-center text-center" data-cursor="view">
+            <p className="section-label reveal-up text-xs sm:text-sm md:text-base">
+              Get In Touch
+            </p>
+
+            <h2 className="section-title max-w-4xl reveal-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+              Schedule a Consultation
+            </h2>
+
+            <p className="section-desc reveal-up text-xs sm:text-sm md:text-base leading-relaxed">
+              {ABOUT.whereWePractice}
+              <br />
+              <br />
+              <span className="font-semibold text-white">{ABOUT.Address}</span>
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-stretch sm:items-center reveal-up mt-6 sm:mt-8">
+              <Link
+                href="/contact"
+                className="btn-khaitan-accent group justify-center text-center text-xs sm:text-sm md:text-base"
+                data-cursor="view"
+              >
                 <span>Contact Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
 
-              <a href={`https://wa.me/919109101055?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`} target="_blank" rel="noopener noreferrer" className="btn-khaitan group justify-center text-center" data-cursor="view">
+              <a
+                href={`https://wa.me/919109101055?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-khaitan group justify-center text-center text-xs sm:text-sm md:text-base"
+                data-cursor="view"
+              >
                 <span>WhatsApp Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </a>
             </div>
           </div>
-          <p className="mt-16 text-xs text-white/40 font-body tracking-wider">
+
+          <p className="mt-12 sm:mt-16 text-xs text-white/40 font-body tracking-wider">
             © {new Date().getFullYear()} {FIRM.name}
           </p>
         </div>
