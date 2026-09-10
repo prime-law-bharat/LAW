@@ -698,30 +698,55 @@ export default function HomePage() {
       </section>
 
 
-
       <section
         id="contact"
-        className="snap-section"
-        style={{ backgroundImage: "url('/images/workstation/workstation.jpg')" }}
+        className="snap-section scroll-mt-20 sm:scroll-mt-24"
+        style={{
+          backgroundImage: "url('/images/workstation/workstation.jpg')",
+        }}
       >
         <div className="section-overlay bg-[#0F1B2D]/85" />
-        <div className="section-content flex flex-col justify-between min-h-[calc(100vh-0px)] py-28">
+        <div className="section-content flex flex-col justify-between min-h-[100dvh] pt-24 sm:pt-32 md:pt-28 pb-16 sm:pb-28">
           <div>
-            <p className="section-label reveal-up">Get In Touch</p>
-            <h2 className="section-title max-w-4xl reveal-up">Schedule a Consultation</h2>
-            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}<tr></tr>{ABOUT.Address}</p>
-            <div className="flex flex-col sm:flex-row gap-5 items-stretch sm:items-center reveal-up">
-              <Link href="/contact" className="btn-khaitan-accent group justify-center" data-cursor="view">
+            <p className="section-label reveal-up text-xs sm:text-sm md:text-base">
+              Get In Touch
+            </p>
+
+            <h2 className="section-title max-w-4xl reveal-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+              Schedule a Consultation
+            </h2>
+
+            <p className="section-desc reveal-up text-xs sm:text-sm md:text-base leading-relaxed">
+              {ABOUT.whereWePractice}
+              <br />
+              <br />
+              <span className="font-semibold text-white">{ABOUT.Address}</span>
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-stretch sm:items-center reveal-up mt-6 sm:mt-8">
+              <Link
+                href="/contact"
+                className="btn-khaitan-accent group justify-center text-center text-xs sm:text-sm md:text-base"
+                data-cursor="view"
+              >
                 <span>Contact Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
-              <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="btn-khaitan group justify-center" data-cursor="view">
-                <span>Call {FIRM.phone1}</span>
+
+              <a
+                href={`https://wa.me/919109101055?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-khaitan group justify-center text-center text-xs sm:text-sm md:text-base"
+                data-cursor="view"
+              >
+                <span>WhatsApp Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </a>
             </div>
           </div>
-          <p className="mt-16 text-xs text-white/40 font-body tracking-wider">
+
+          <p className="mt-12 sm:mt-16 text-xs text-white/40 font-body tracking-wider">
             © {new Date().getFullYear()} {FIRM.name}
           </p>
         </div>
